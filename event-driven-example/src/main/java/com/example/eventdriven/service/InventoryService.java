@@ -1,19 +1,24 @@
 package com.example.eventdriven.service;
 
-import com.example.eventdriven.core.EventBus;
+import com.example.eventdriven.core.IEventBus;
 import com.example.eventdriven.model.OrderCreatedEvent;
 
 /**
- * Servizio che gestisce l'inventario in risposta agli eventi
+ * Implementazione del servizio di gestione inventario
  */
-public class InventoryService {
+public class InventoryService implements IInventoryService {
     
-    public InventoryService(EventBus eventBus) {
+    public InventoryService(IEventBus eventBus) {
         eventBus.subscribe(OrderCreatedEvent.class, this::handleOrderCreatedEvent);
     }
     
     private void handleOrderCreatedEvent(OrderCreatedEvent event) {
-        System.out.println("InventoryService: Updating inventory for order " + event.getOrderId());
+        updateInventory(event.getOrderId());
+    }
+    
+    @Override
+    public void updateInventory(String orderId) {
+        System.out.println("InventoryService: Updating inventory for order " + orderId);
         // Logica per aggiornare l'inventario...
     }
 }

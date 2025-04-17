@@ -3,5 +3,9 @@
 /home/vagrant/it-architectures/event-driven-example/src/main/java/com/example/eventdriven/service/EmailNotificationService.java
 /home/vagrant/it-architectures/event-driven-example/src/main/java/com/example/eventdriven/model/OrderCreatedEvent.java
 /home/vagrant/it-architectures/event-driven-example/src/main/java/com/example/eventdriven/core/EventBus.java
+/home/vagrant/it-architectures/event-driven-example/src/main/java/com/example/eventdriven/service/IEmailNotificationService.java
 /home/vagrant/it-architectures/event-driven-example/src/main/java/com/example/eventdriven/core/Event.java
+/home/vagrant/it-architectures/event-driven-example/src/main/java/com/example/eventdriven/service/IOrderService.java
 /home/vagrant/it-architectures/event-driven-example/src/main/java/com/example/eventdriven/service/InventoryService.java
+/home/vagrant/it-architectures/event-driven-example/src/main/java/com/example/eventdriven/core/IEventBus.java
+/home/vagrant/it-architectures/event-driven-example/src/main/java/com/example/eventdriven/service/IInventoryService.java
