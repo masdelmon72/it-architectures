@@ -1,0 +1,8 @@
+# Commands for generating scaffolds for 3 different architecturale it software
+
+mvn archetype:generate -DgroupId=com.example -DartifactId=event-driven-example -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false -Dversion=1.0-SNAPSHOT -DjavaVersion=17
+
+mvn archetype:generate -DgroupId=com.example -DartifactId=async-await-example -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false -Dversion=1.0-SNAPSHOT -DjavaVersion=17
+
+mvn archetype:generate -DgroupId=com.example -DartifactId=message-queue-example -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false -Dversion=1.0-SNAPSHOT -DjavaVersion=17
+
