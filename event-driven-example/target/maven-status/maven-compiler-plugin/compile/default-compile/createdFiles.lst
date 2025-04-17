@@ -1,7 +1,11 @@
+com/example/eventdriven/core/IEventBus.class
+com/example/eventdriven/service/IInventoryService.class
 com/example/eventdriven/model/OrderCreatedEvent.class
 com/example/eventdriven/core/EventBus.class
 com/example/eventdriven/EventDrivenApplication.class
 com/example/eventdriven/core/Event.class
+com/example/eventdriven/service/IOrderService.class
+com/example/eventdriven/service/IEmailNotificationService.class
 com/example/eventdriven/service/OrderService.class
 com/example/eventdriven/service/EmailNotificationService.class
 com/example/eventdriven/service/InventoryService.class

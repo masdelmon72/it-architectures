@@ -1,9 +1,14 @@
 package com.example.eventdriven;
 
+import com.example.eventdriven.core.IEventBus;
 import com.example.eventdriven.core.EventBus;
+import com.example.eventdriven.service.IEmailNotificationService;
 import com.example.eventdriven.service.EmailNotificationService;
+import com.example.eventdriven.service.IInventoryService;
 import com.example.eventdriven.service.InventoryService;
+import com.example.eventdriven.service.IOrderService;
 import com.example.eventdriven.service.OrderService;
+
 
 /**
  * Applicazione principale che dimostra l'architettura event-driven
@@ -11,12 +16,12 @@ import com.example.eventdriven.service.OrderService;
 public class EventDrivenApplication {
     
     public static void main(String[] args) {
-        EventBus eventBus = EventBus.getInstance();
+        IEventBus eventBus = EventBus.getInstance();
         
         // Inizializzazione dei servizi
-        new EmailNotificationService(eventBus);
-        new InventoryService(eventBus);
-        OrderService orderService = new OrderService(eventBus);
+        IEmailNotificationService emailService = new EmailNotificationService(eventBus);
+        IInventoryService inventoryService = new InventoryService(eventBus);
+        IOrderService orderService = new OrderService(eventBus);
         
         System.out.println("Starting Event-Driven Application...");
         
