@@ -1,0 +1,6 @@
+/home/vagrant/it-architectures/message-queue-example/src/main/java/com/example/messagequeue/service/consumer/MessageConsumer.java
+/home/vagrant/it-architectures/message-queue-example/src/main/java/com/example/messagequeue/model/Message.java
+/home/vagrant/it-architectures/message-queue-example/src/main/java/com/example/messagequeue/broker/MessageBroker.java
+/home/vagrant/it-architectures/message-queue-example/src/main/java/com/example/messagequeue/MessageQueueApplication.java
+/home/vagrant/it-architectures/message-queue-example/src/main/java/com/example/messagequeue/service/producer/MessageProducer.java
+/home/vagrant/it-architectures/message-queue-example/src/main/java/com/example/messagequeue/queue/MessageQueue.java
