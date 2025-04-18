@@ -1,0 +1,40 @@
+Analizziamo come il progetto soddisfa i principi SOLID e come possiamo migliorarlo ulteriormente con l'uso di interfacce funzionali per i servizi.
+Applicazione dei principi SOLID nel progetto
+1. Single Responsibility Principle (SRP)
+
+Rispettato: Ogni classe ha una singola responsabilità ben definita:
+
+EventBus gestisce solo la distribuzione degli eventi
+Event definisce solo la struttura base degli eventi
+I servizi (OrderService, EmailNotificationService, InventoryService) hanno responsabilità specifiche
+
+
+
+2. Open/Closed Principle (OCP)
+
+Parzialmente rispettato:
+
+Il sistema è estensibile attraverso la creazione di nuovi tipi di eventi
+Nuovi servizi possono essere aggiunti senza modificare il codice esistente
+Tuttavia, l'EventBus potrebbe necessitare modifiche per aggiungere nuove funzionalità di dispatching
+
+
+
+3. Liskov Substitution Principle (LSP)
+
+Rispettato: La classe Event è estesa correttamente da OrderCreatedEvent senza alterare il comportamento atteso
+
+4. Interface Segregation Principle (ISP)
+
+Non completamente implementato:
+
+I servizi non utilizzano interfacce, quindi non c'è una chiara separazione tra contratto e implementazione
+
+
+
+5. Dependency Inversion Principle (DIP)
+
+Parzialmente rispettato:
+
+I servizi dipendono dall'EventBus che viene iniettato tramite costruttore
+Tuttavia, mancano interfacce per astrarre i servizi stessi e l'EventBus

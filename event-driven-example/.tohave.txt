@@ -1,0 +1,53 @@
+Perché le interfacce funzionali sono importanti per il disaccoppiamento
+L'introduzione di interfacce per i servizi e l'EventBus offre numerosi vantaggi in termini di disaccoppiamento:
+
+Separazione tra contratto e implementazione:
+
+Le classi dipendono da interfacce (astrazioni) anziché implementazioni concrete
+Questo rispetta il Dependency Inversion Principle: "Dipendi dalle astrazioni, non dalle concretizzazioni"
+
+
+Facilita il testing:
+
+Possiamo creare mock o stub implementando le interfacce
+I test unitari diventano più semplici e isolati
+
+
+Flessibilità e sostituibilità:
+
+Possiamo sostituire un'implementazione con un'altra senza modificare il codice client
+Ad esempio, potremmo sostituire EmailNotificationService con una diversa implementazione che usa un provider diverso
+
+
+Maggiore modularità:
+
+I moduli interagiscono attraverso contratti ben definiti
+Le modifiche interne ai moduli non impattano gli altri moduli
+
+
+Migliore comprensione del codice:
+
+Le interfacce fungono da documentazione del comportamento atteso
+Chiariscono il contratto tra i diversi componenti
+
+
+Possibilità di composizione:
+
+Le interfacce permettono di implementare pattern come Decorator, Adapter o Proxy
+Possiamo estendere il comportamento dei servizi mantenendo lo stesso contratto
+
+
+
+Nel contesto specifico dell'architettura event-driven, le interfacce funzionali permettono di:
+
+Standardizzare il modo in cui i componenti interagiscono con l'EventBus
+Facilitare l'integrazione di nuovi tipi di servizi o event handler
+Consentire cambiamenti nell'implementazione dell'EventBus (ad esempio passando da un dispatch asincrono a uno sincrono) senza impattare i client
+
+Con queste modifiche, abbiamo migliorato significativamente l'adesione ai principi SOLID, in particolare:
+
+OCP: Il sistema è ora più aperto all'estensione e chiuso alla modifica
+ISP: Le interfacce sono focalizzate e specifiche per ogni responsabilità
+DIP: Le dipendenze sono state invertite, facendo affidamento su astrazioni
+
+Questa struttura più modulare e ben disaccoppiata faciliterà la manutenzione e l'evoluzione del sistema nel tempo.
