@@ -1,0 +1,6 @@
+com/example/messagequeue/service/producer/MessageProducer.class
+com/example/messagequeue/broker/MessageBroker.class
+com/example/messagequeue/service/consumer/MessageConsumer.class
+com/example/messagequeue/model/Message.class
+com/example/messagequeue/queue/MessageQueue.class
+com/example/messagequeue/MessageQueueApplication.class
